@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            /// this is [AlertDialog]
             ElevatedButton(
               onPressed: () {
                 showDialog(
@@ -66,6 +67,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Alert Dialog"),
             ),
+            /// this is [Simple Dialog]
             ElevatedButton(
               onPressed: () {
                 showDialog(
@@ -97,6 +99,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Simple Dialog"),
             ),
+            /// this is [Full Screen Dialog]
             ElevatedButton(
               onPressed: () {
                 showGeneralDialog(
@@ -108,6 +111,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Full Screen Dialog"),
             ),
+            /// this is cupertino style dialog
             ElevatedButton(
               onPressed: () {
                 showDialog(
@@ -135,6 +139,8 @@ class HomePage extends StatelessWidget {
   }
 }
 
+
+/// full screen dialog widget
 class MyFullScreenDialog extends StatelessWidget {
   const MyFullScreenDialog({Key? key}) : super(key: key);
 
