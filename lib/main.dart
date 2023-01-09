@@ -53,11 +53,13 @@ class HomePage extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              const snackBar = SnackBar(content: Text("You have logged out sucessfully"));
+                              const snackBar = SnackBar(
+                                  content:
+                                      Text("You have logged out sucessfully"));
 
-                              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackBar);
                               Navigator.pop(context);
-
                             },
                             child: const Text("Log out"),
                           )
@@ -67,11 +69,12 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Alert Dialog"),
             ),
+
             /// this is [Simple Dialog]
             ElevatedButton(
               onPressed: () {
                 showDialog(
-                  barrierDismissible: false,
+                  barrierDismissible: true,
                   context: context,
                   builder: (context) {
                     return const SimpleDialog(
@@ -99,6 +102,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Simple Dialog"),
             ),
+
             /// this is [Full Screen Dialog]
             ElevatedButton(
               onPressed: () {
@@ -111,6 +115,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Full Screen Dialog"),
             ),
+
             /// this is cupertino style dialog
             ElevatedButton(
               onPressed: () {
@@ -132,13 +137,24 @@ class HomePage extends StatelessWidget {
               },
               child: const Text("Cupertino Alert Dialog"),
             ),
+
+            /// this is bottomsheet in flutter
+            ElevatedButton(
+              onPressed: () {
+                showModalBottomSheet(context: context, builder: (context) {
+                  return const Center(
+                    child: Text("this is bottom sheet"),
+                  );
+                });
+              },
+              child: const Text("Bottom Sheet"),
+            )
           ],
         ),
       ),
     );
   }
 }
-
 
 /// full screen dialog widget
 class MyFullScreenDialog extends StatelessWidget {
